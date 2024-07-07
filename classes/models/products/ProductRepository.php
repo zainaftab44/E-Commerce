@@ -8,7 +8,7 @@ class ProductRepository implements Repository {
     }
 
     public function find($id) {
-        $data = $this->db->fetch('SELECT id,description,name FROM products WHERE id = :id AND disabled = 0', ['id' => $id]);
+        $data = $this->db->fetch('SELECT * FROM products WHERE id = :id AND disabled = 0', ['id' => $id]);
         if ($data) {
             return  new Product(
                 $data['id'],
@@ -25,7 +25,7 @@ class ProductRepository implements Repository {
 
     public function findAll() {
         $products = [];
-        while ($data = $this->db->fetch('SELECT id,description,name FROM products')) {
+        while ($data = $this->db->fetch('SELECT * FROM products')) {
             $products[] =  new Product(
                 $data['id'],
                 $data['description'],
@@ -64,6 +64,10 @@ class ProductRepository implements Repository {
         }
     }
 
+    /**
+     * products would be moved to disabled so that the analytics related to them
+     * won't be lost due to cascade deletion based on foreign/primary key relation 
+     */
     public function delete($id) {
         $this->db->execute('UPDATE products SET disabled = "1" WHERE id = :id', ['id' => $id]);
     }
