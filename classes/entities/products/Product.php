@@ -8,13 +8,15 @@ class Product {
     private $images = [];
     private $price;
     private $discount;
+    private $sku;
 
-    public function __construct(int|null $id, string $name, string $description, string $images, $price, int $discount) {
+    public function __construct(int|null $id, string $name, string $description, string $images, $price, int $discount, string $sku='') {
         $this->name = $name;
         $this->description = $description;
         $this->images = $images;
         $this->price = $price;
         $this->discount = $discount;
+        $this->sku = $sku;
         $this->id = empty($id)?((new ProductRepository())->save($this)):$id;
     }
 
@@ -40,6 +42,10 @@ class Product {
 
     public function getDiscount() {
         $this->discount;
+    }
+
+    public function getSku() {
+        $this->sku;
     }
 
     public function setId(int $id) {

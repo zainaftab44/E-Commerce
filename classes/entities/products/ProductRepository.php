@@ -16,7 +16,8 @@ class ProductRepository implements Repository {
                 $data['name'],
                 $data['images'],
                 $data['price'],
-                $data['discount']
+                $data['discount'],
+                $data['sku'],
             );
         }
 
@@ -32,7 +33,8 @@ class ProductRepository implements Repository {
                 $data['name'],
                 $data['images'],
                 $data['price'],
-                $data['discount']
+                $data['discount'],
+                $data['sku']
             );
         }
 
@@ -48,16 +50,18 @@ class ProductRepository implements Repository {
                 'description' => $product->getDescription(),
                 'images' => $product->getImages(),
                 'price' => $product->getPrice(),
-                'discount' => $product->getDiscount()
+                'discount' => $product->getDiscount(),
+                'sku' => $product -> getSku()
             ]);
         } else {
             // Create new product
-            $data = $this->db->execute('INSERT INTO products (name, description, images, price, discount) VALUES (:name, :description, :images, :price, :discount)', [
+            $data = $this->db->execute('INSERT INTO products (name, description, images, price, discount,sku) VALUES (:name, :description, :images, :price, :discount,:sku)', [
                 'name' => $product->getName(),
                 'description' => $product->getDescription(),
                 'images' => $product->getImages(),
                 'price' => $product->getPrice(),
-                'discount' => $product->getDiscount()
+                'discount' => $product->getDiscount(),
+                'sku' => $product -> getSku()
             ]);
             $product->setId($data->lastInsertId());
             return $data->lastInsertId();
