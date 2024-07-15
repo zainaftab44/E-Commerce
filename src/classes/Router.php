@@ -1,8 +1,7 @@
 <?php
 
-namespace src\classes;
+namespace Src\Classes;
 
-use Directory;
 use Exception;
 use Src\Interfaces\ControllerInterface;
 
