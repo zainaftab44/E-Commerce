@@ -1,4 +1,5 @@
 <?php
+use Singletons\Database;
 
 class ProductRepository implements Repository {
 

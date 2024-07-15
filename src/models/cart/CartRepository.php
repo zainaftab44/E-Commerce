@@ -1,5 +1,6 @@
 <?php
 
+use Singletons\Database;
 
 class CartRepository implements Repository {
     private $db;

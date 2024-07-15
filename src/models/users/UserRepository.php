@@ -1,5 +1,7 @@
 <?php
 
+use Singletons\Database;
+
 class UserRepository implements Repository {
 
     private Database $db;
