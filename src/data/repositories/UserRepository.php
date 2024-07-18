@@ -1,5 +1,8 @@
 <?php
+namespace Data\Repositories;
 
+use Models\User;
+use Repository;
 use Utils\Database;
 
 class UserRepository implements Repository {

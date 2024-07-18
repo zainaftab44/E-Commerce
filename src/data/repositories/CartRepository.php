@@ -1,5 +1,8 @@
 <?php
+namespace Data\Repositories;
 
+use Models\Cart;
+use Repository;
 use Utils\Database;
 
 class CartRepository implements Repository {

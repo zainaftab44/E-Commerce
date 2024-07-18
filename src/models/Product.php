@@ -1,4 +1,7 @@
 <?php
+namespace Models;
+
+use Data\Repositories\ProductRepository;
 
 class Product {
 

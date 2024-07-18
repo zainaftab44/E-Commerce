@@ -1,5 +1,8 @@
 <?php
 
+namespace Models;
+
+use Data\Repositories\CartRepository;
 
 class Cart {
    private $id;

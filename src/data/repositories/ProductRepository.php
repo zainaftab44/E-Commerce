@@ -1,4 +1,8 @@
 <?php
+namespace Data\Repositories;
+
+use Models\Product;
+use Repository;
 use Utils\Database;
 
 class ProductRepository implements Repository {

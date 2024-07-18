@@ -1,0 +1,31 @@
+# Use the official PHP image with Apache
+FROM php:8.4.0alpha1-zts-alpine3.20
+
+# Install dependencies
+RUN apt-get update && apt-get install -y \
+    libzip-dev \
+    unzip \
+    && docker-php-ext-install zip pdo pdo_mysql
+
+# Enable Apache mod_rewrite
+RUN a2enmod rewrite
+
+# Copy application files
+COPY . /var/www/html
+
+# Set the working directory
+WORKDIR /var/www/html
+
+# Install Composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
+# Run Composer install
+RUN composer install
+
+# Set entrypoint script
+COPY docker/entrypoint.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/entrypoint.sh
+ENTRYPOINT ["entrypoint.sh"]
+
+# Expose port 80
+EXPOSE 80
