@@ -1,5 +1,6 @@
 <?php
 
+namespace Enums;
 /**
  * This class is to be used for managing permission to handle access to various 
  * features of the application

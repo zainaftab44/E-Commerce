@@ -1,4 +1,5 @@
 <?php
+namespace Enums;
 
 enum OrderStatus {
     case PAYMENT_PROCESSING;
