@@ -19,6 +19,7 @@ define('DEFAULT_STATUS',"Failed");
 //Images related constants
 define('BASE_IMG_DIR', __DIR__ .'images'.DIRECTORY_SEPARATOR);
 
+define('STORE_NAME',"E-COMY");
 if ($env == 'DEV') {
     //database configuration
     define('DBTYPE', 'mysql');
