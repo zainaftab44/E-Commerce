@@ -1,13 +1,13 @@
 <?php
 
-namespace Src\Classes;
+namespace Utils;
 
 use Exception;
-use Src\Interfaces\ControllerInterface;
+use Interfaces\ControllerInterface;
 
 /**
  * Class Router
- * @package src\classes
+ * @package classes
  *
  * Handles auto-routing for the application.
  */

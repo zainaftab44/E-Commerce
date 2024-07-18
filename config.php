@@ -16,6 +16,8 @@ define('DEFAULT_MESSAGE',"Unable to load resource");
 //Default status in case route not found or nothing received from route
 define('DEFAULT_STATUS',"Failed");
 
+//Images related constants
+define('BASE_IMG_DIR', __DIR__ .'images'.DIRECTORY_SEPARATOR);
 
 if ($env == 'DEV') {
     //database configuration

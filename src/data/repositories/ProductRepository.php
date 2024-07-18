@@ -1,5 +1,5 @@
 <?php
-use Singletons\Database;
+use Utils\Database;
 
 class ProductRepository implements Repository {
 

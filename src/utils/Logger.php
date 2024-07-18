@@ -1,13 +1,13 @@
 <?php
 
-namespace Src\Classes;
+namespace Utils;
 
 use DateTime;
 use DateTimeZone;
 
 /**
  * Class Logger
- * @package src\classes
+ * @package classes
  * 
  * Basic logger class with different log levels.
  */

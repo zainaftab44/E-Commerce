@@ -1,8 +1,8 @@
 <?php
 
-namespace Src\Controllers;
+namespace Controllers;
 
-use Src\Interfaces\ControllerInterface;
+use Interfaces\ControllerInterface;
 
 class HomeController implements ControllerInterface{
 

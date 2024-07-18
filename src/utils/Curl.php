@@ -1,13 +1,13 @@
 
 <?php
 
-namespace src\classes;
+namespace Utils;
 
 use Exception;
 
 /**
  * Class Curl
- * @package src\classes
+ * @package classes
  *
  * A simple CURL wrapper for HTTP requests.
  */

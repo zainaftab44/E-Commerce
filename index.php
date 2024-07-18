@@ -3,7 +3,7 @@
 require_once 'autoloader.php';
 require_once 'config.php';
 
-use Src\Classes\Router;
+use Utils\Router;
 
 // Capture the request URI
 $requestUri = $_SERVER['REQUEST_URI'];
